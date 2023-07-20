@@ -2,15 +2,9 @@ const express = require('express');
 const session = require('express-session');
 const sqlite3 = require('sqlite3').verbose();
 
-const db = new sqlite3.Database('./db/poc.sqlite3');
+const { createUser, getUser, deleteUser } = require('./db');
 
-const newTable = `CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL,
-    sessionid TEXT,
-    created DATETIME DEFAULT CURRENT_TIMESTAMP
-    )`;
+
 
 db.run(newTable, (err) => {
     if (err) {
