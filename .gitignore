@@ -1,0 +1,7 @@
+//write common gitignore
+
+.env
+node_modules
+dist
+.sqlite
+```     
