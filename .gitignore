@@ -3,5 +3,7 @@
 .env
 node_modules
 dist
-.sqlite
+.sqlite3
+.DS_Store
+package-lock.json
 ```     
